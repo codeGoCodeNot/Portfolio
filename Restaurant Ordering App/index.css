@@ -71,6 +71,11 @@ p {
   opacity: 0.72;
 }
 
+.order-price {
+  color: var(--main-font-color);
+  opacity: 1;
+}
+
 /* images */
 img {
   width: 70px;
@@ -85,12 +90,12 @@ ul {
 
 /* button */
 button {
-  opacity: 1;
   width: 50px;
   height: 50px;
   border: 2px solid #dedede;
   border-radius: 50%;
   background: var(--main-bg-color);
+  font-family: var(--btn-font);
   font-size: 32px;
   font-weight: 200;
   cursor: pointer;
@@ -102,7 +107,8 @@ button:hover {
 }
 
 /* content */
-.menu-container {
+.menu-container,
+.order-container {
   max-width: var(--item-list-width);
   margin: 0 auto;
 }
@@ -141,4 +147,29 @@ li {
   height: 2px;
   width: 100%;
   background: var(--secondary-hr-color);
+  margin: 20px 0 20px 0;
+}
+
+/* order */
+.order-container {
+  padding: 30px 0;
+}
+
+.order-title {
+  padding: 30px 0 0 0;
+  text-align: center;
+  color: #000000;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item h2 {
+  line-height: 40px;
+}
+
+span {
+  margin-right: 50px;
 }
