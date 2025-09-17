@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container" id="main">
+      <form class="todo-form">
+        <label for="todo-title">Todo</label>
+        <input type="text" id="todo-title" placeholder="Enter your todo" />
+        <select id="todo-category">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+        </select>
+        <input type="submit" class="btn btn-outline" value="add" />
+      </form>
+
+      <hr class="separator" />
+
+      <label>
+        Filter:
+        <select id="todo-filter">
+          <option value="">Show all</option>
+          <option value="work">Work only</option>
+          <option value="personal">Personal only</option>
+        </select>
+      </label>
+      <h3>Todos today: <span id="todo-count"></span></h3>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

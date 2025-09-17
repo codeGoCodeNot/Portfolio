@@ -1,0 +1,171 @@
+/* ====== Layout ====== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #d9cfd3;
+}
+
+/* ====== Typography ====== */
+h1 {
+  margin: 50px 0 30px 0;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+}
+
+.form h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+.required {
+  color: #dca15d;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 1px;
+}
+
+/* ====== Buttons ====== */
+.btn {
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px;
+  padding: 10px 30px;
+  text-decoration: none;
+  max-width: 120px;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 220ms, transform 220ms;
+  border: none;
+}
+
+.edit-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.edit-btn:hover {
+  color: #007bff;
+}
+
+.delete-btn {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  color: red;
+}
+
+.delete-btn:hover {
+  color: #434343;
+}
+
+.btn-outline {
+  color: #d9cfd3;
+  background-color: #2c2c2c;
+  border: #434343 2px solid;
+  box-shadow: 1px 1px 7px #c4c4c4;
+}
+
+/* ====== Forms ====== */
+.form h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.form h3 {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.border-form {
+  border-bottom: #d9cfd3 solid 1px;
+  margin-bottom: 20px;
+}
+
+input:not(.btn) {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 0.75em 0.5em;
+  background-color: #fff;
+  width: 100%;
+  max-width: 250px;
+  border: none;
+  border-left: 7px solid #d9cfd3;
+}
+
+::placeholder {
+  color: #d9cfd3;
+}
+
+/* ====== Containers ====== */
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 0 20px;
+}
+
+/* ====== Select & List ====== */
+select {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+#todo-list {
+  line-height: 28px;
+  padding-left: 0;
+}
+
+/* ====== Misc ====== */
+.separator {
+  margin-bottom: 20px;
+}
+
+/* ====== List Items ====== */
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* edit items */
+
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cancel-btn,
+.done-btn {
+  margin: 0 0 10px 0;
+}

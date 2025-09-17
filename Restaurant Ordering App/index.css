@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: #f5f5f5;
+  --main-bg-color: #ffffff;
+  --title-font-color: #ffffff;
+  --product-name-color: #000000;
+  --primary-hr-color: #d2d2d2;
+  --secondary-hr-color: #393333;
+  --primary-width: 600px;
+  --main-font: "Smythe", system-ui;
+}
+
+body {
+  background: var(--primary-bg-color);
+}
+
+header {
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: var(--primary-width);
+  height: 167px;
+  margin: 0 auto;
+}
+
+main {
+  height: 994px;
+  background: var(--main-bg-color);
+  width: var(--primary-width);
+  margin: 0 auto;
+}
+
+/* web title layout */
+.title-layout {
+  padding: 40px 0 0 50px;
+}
+
+/* typography */
+h1,
+h3 {
+  color: var(--title-font-color);
+  font-family: var(--main-font);
+}
+
+h1 {
+  font-size: 39px;
+}
+
+h3 {
+  font-size: 22.42px;
+}
