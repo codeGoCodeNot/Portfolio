@@ -1,8 +1,8 @@
 import menuArray from "./data.js";
 
-const order = [];
+const order = []; // holds menuArray
 
-const addBtn = () => {
+const renderBtn = () => {
   document.querySelectorAll(".add-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const menuId = Number(e.target.dataset.id);
@@ -15,6 +15,15 @@ const addBtn = () => {
   });
 };
 
+// remove feature
+const removeOrder = (id) => {
+  const index = order.findIndex((item) => item.id === id);
+  if (index !== -1) {
+    order.splice(index, 1);
+    renderOrder();
+  }
+};
+
 const renderOrder = () => {
   const total = order.reduce((total, current) => total + current.price, 0);
   let html = `<h1 class="order-title" >Your Order</h1>`;
@@ -22,10 +31,13 @@ const renderOrder = () => {
   order.forEach((menu) => {
     html += `
           <div class="order-item">
-          <div class="item">
-            <h2>${menu.name}</h2>
-            <span><p>remove</p></span>
-            <p class="order-price">$${menu.price}</p>
+            <div class="order-row">
+              <div class="order-name-remove">
+                <span class="order-name"><h2>${menu.name}</h2></span>
+                <span class="remove-btn" data-remove="${menu.id}" >remove</span>
+              </div>
+              <span class="order-price">$${menu.price}</span>
+            </div>
           </div>
           `;
   });
@@ -35,11 +47,17 @@ const renderOrder = () => {
             <h2>Total Price:</h2>
             <p class="order-price">$${total}</p>
           </div>
-        </div>
         `;
 
   document.querySelector(".order-container").innerHTML = html;
 };
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("remove-btn")) {
+    const id = +e.target.getAttribute("data-remove");
+    removeOrder(id);
+  }
+});
 
 const renderHtml = () => {
   return menuArray
@@ -66,7 +84,7 @@ const renderHtml = () => {
 
 const render = () => {
   document.querySelector(".menu-container").innerHTML = renderHtml();
-  addBtn();
+  renderBtn();
 };
 
 render();

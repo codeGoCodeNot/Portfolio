@@ -156,20 +156,36 @@ li {
 }
 
 .order-title {
-  padding: 30px 0 0 0;
+  padding: 30px 0;
   text-align: center;
   color: #000000;
 }
 
-.item {
+.order-row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
-.item h2 {
-  line-height: 40px;
+.order-name-remove {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-span {
-  margin-right: 50px;
+.order-price {
+  min-width: 40px;
+  text-align: right;
+}
+
+.remove-btn {
+  color: #8b8b8b;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 12px;
+  transition: color 0.2s;
+}
+.remove-btn:hover {
+  color: #a00;
 }
