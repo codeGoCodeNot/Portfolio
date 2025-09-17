@@ -37,10 +37,12 @@ header {
 }
 
 main {
-  height: 994px;
+  min-height: 500px;
   background: var(--main-bg-color);
   width: var(--primary-width);
   margin: 0 auto;
+  max-height: calc(100% - 60px);
+  overflow-y: auto;
 }
 
 /* web title layout */
@@ -106,6 +108,32 @@ button:hover {
   color: #111827;
 }
 
+.payment-btn,
+#payment-btn,
+.cancel-btn {
+  width: 508px;
+  height: 60px;
+  background: #19d395;
+  color: var(--title-font-color);
+  border-radius: 5px;
+  border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+}
+
+.payment-btn:hover,
+.cancel-btn:hover {
+  background: #158850;
+  color: #f5f5f5;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  margin: 0 auto;
+}
+
 /* content */
 .menu-container,
 .order-container {
@@ -153,6 +181,17 @@ li {
 /* order */
 .order-container {
   padding: 30px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f4f4f4;
+}
+
+.order-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.order-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
 }
 
 .order-title {
@@ -166,6 +205,14 @@ li {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  padding-bottom: 30px;
 }
 
 .order-name-remove {
@@ -188,4 +235,59 @@ li {
 }
 .remove-btn:hover {
   color: #a00;
+}
+
+/* modal */
+
+.modal-title {
+  font-family: var(--btn-font);
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  min-width: 340px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.modal-form input {
+  padding: 0.9em 1em;
+  border: 2px solid #eee;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+#payment-btn,
+.cancel-btn {
+  width: 100%;
 }

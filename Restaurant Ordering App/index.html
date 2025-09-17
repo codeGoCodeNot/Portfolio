@@ -25,10 +25,30 @@
         <h3>The best burgers and pizzas in Cebu.</h3>
       </div>
     </header>
+    <!-- modal -->
+    <div class="modal" id="modal">
+      <form class="modal-form">
+        <h2 class="modal-title">Enter card details</h2>
+        <input type="text" placeholder="Enter your name" required />
+        <input
+          type="text"
+          placeholder="Enter card number"
+          pattern="^\d{11}$"
+          required
+        />
+        <input type="text" placeholder="Enter CVV" pattern="^\d{3}$" required />
+        <div class="button-container">
+          <button class="form-btn" id="payment-btn" type="submit">Pay</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
     <main>
       <section class="menu-container"></section>
       <section class="order-container"></section>
     </main>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
