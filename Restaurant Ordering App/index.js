@@ -24,8 +24,18 @@ const removeOrder = (id) => {
   }
 };
 
+// format name for thank you message
+const formatName = (name) => {
+  return name
+    .trim()
+    .split(/\s+/) // regex for white spaces
+    .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+    .join(" ");
+};
+
 // remove and complete order listener
 document.addEventListener("click", (e) => {
+  const modal = document.querySelector(".modal");
   // remove order logic
   if (e.target.classList.contains("remove-btn")) {
     const id = +e.target.getAttribute("data-remove");
@@ -34,12 +44,24 @@ document.addEventListener("click", (e) => {
 
   // complete order logic
   if (e.target.classList.contains("payment-btn")) {
-    const modal = document.querySelector(".modal");
     modal.classList.add("show");
   }
 
+  // pay logic
+  if (e.target.classList.contains("form-btn")) {
+    e.preventDefault();
+    const name = document.querySelector(".name-input").value;
+    modal.classList.remove("show");
+
+    document.querySelector(".order-container").innerHTML = `
+    <div class="thank-you-message">
+      Thanks, ${formatName(name)}! Your order is on its way!
+    </div>
+    `;
+  }
+
+  // cancel order logic
   if (e.target.classList.contains("cancel-btn")) {
-    const modal = document.querySelector(".modal");
     modal.classList.remove("show");
   }
 });

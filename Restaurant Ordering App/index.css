@@ -78,6 +78,13 @@ p {
   opacity: 1;
 }
 
+.thank-you-message {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
 /* images */
 img {
   width: 70px;

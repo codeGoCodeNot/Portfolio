@@ -29,14 +29,21 @@
     <div class="modal" id="modal">
       <form class="modal-form">
         <h2 class="modal-title">Enter card details</h2>
-        <input type="text" placeholder="Enter your name" required />
         <input
+          type="text"
+          placeholder="Enter your name"
+          class="name-input"
+          required
+        />
+        <input
+          class="name-input"
           type="text"
           placeholder="Enter card number"
           pattern="^\d{11}$"
           required
         />
         <input type="text" placeholder="Enter CVV" pattern="^\d{3}$" required />
+
         <div class="button-container">
           <button class="form-btn" id="payment-btn" type="submit">Pay</button>
           <button class="cancel-btn">Cancel</button>
