@@ -31,18 +31,19 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: var(--primary-width);
   height: 167px;
-  margin: 0 auto;
 }
 
 main {
-  max-height: 500px;
   background: var(--main-bg-color);
-  max-width: var(--primary-width);
+  max-height: 100%;
+}
+
+/* center */
+header,
+main {
   margin: 0 auto;
-  max-height: calc(100% - 60px);
-  overflow-y: auto;
+  max-width: var(--primary-width);
 }
 
 /* web title layout */
