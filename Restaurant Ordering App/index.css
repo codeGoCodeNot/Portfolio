@@ -44,6 +44,7 @@ header,
 main {
   margin: 0 auto;
   max-width: var(--primary-width);
+  width: 80%;
 }
 
 /* web title layout */
@@ -203,7 +204,7 @@ li {
 }
 
 .order-title {
-  padding: 30px 0;
+  padding: 0.8em 0;
   text-align: center;
   color: #000000;
 }
@@ -271,7 +272,7 @@ li {
 
 .modal-form {
   background: #fff;
-  padding: 2rem;
+  padding: 2em;
   border-radius: 12px;
   min-width: 340px;
   width: 100%;
@@ -284,7 +285,7 @@ li {
 }
 
 .modal-form input {
-  padding: 0.9rem 1rem;
+  padding: 1em 1em;
   border: 2px solid #eee;
   border-radius: 6px;
   font-size: 1.1rem;
