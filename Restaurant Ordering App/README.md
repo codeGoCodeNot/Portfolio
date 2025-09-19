@@ -29,7 +29,7 @@ Just open the `index.html` file in your browser.
 ## Deployment
 
 This app is live and can be accessed here:  
-[https://genuine-kashata-2a972f.netlify.app/](https://genuine-kashata-2a972f.netlify.app/)
+https://app.netlify.com/projects/visionary-nasturtium-0811b1/overview
 
 ## Screenshots
 
