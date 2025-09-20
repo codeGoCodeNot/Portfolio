@@ -1,6 +1,6 @@
 # Restaurant Ordering App
 
-Live Demo: [https://genuine-kashata-2a972f.netlify.app/](https://genuine-kashata-2a972f.netlify.app/)
+Live Demo: https://cosmic-fudge-07ec94.netlify.app/
 
 ## Overview
 
